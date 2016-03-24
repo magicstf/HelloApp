@@ -20,6 +20,7 @@
     apiready = function(){
         var scrollpic = api.require('UIScrollPicture');
         var path = ['./image/banner1.jpg','./image/banner2.jpg','./image/banner3.jpg','./image/banner4.jpg'];
+        var captions = ['标题一','标题二','标题三'];
         scrollpic.open({
             rect : {
               x : 0,
@@ -29,6 +30,13 @@
             },
             data : {
               paths : path,
+            },
+            styles : {
+              indicator: {
+                align: 'center',
+                color: '#FFFFFF',
+                activeColor: '#DA70D6'
+              }
             },
             placeholderImg: 'widget://image/slide1.jpg',
             contentMode: 'scaleToFill',
